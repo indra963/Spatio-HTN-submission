@@ -9,15 +9,13 @@ public class Timer : MonoBehaviour {
     private float startTime;
     private bool finished = false;
 
-	// Use this for initialization
-	void Start ()
-    {
-        startTime = Time.time;
-	}
+    // Use this for initialization
+    void Start () {
+    	startTime = Time.time;
+    }
 	
 	// Update is called once per frame
-	void Update ()
-    {
+    void Update () {
         if (finished) return;
 
         float t = Time.time - startTime;
@@ -25,5 +23,5 @@ public class Timer : MonoBehaviour {
         string sec = (t % 60).ToString("f2");
 
         timerText.text = min + ":" + sec;
-	}
+    }
 }
